@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+  font-family: pastel_love;
+  font-size: 1.5vw;
+  background-image: url("./static/seamless_cat_bg.jpg");
+  background-repeat: repeat;
+  background-size: 25%;
+}
+
+.title {
+  border-style: solid;
+  border-width: 145px 55px 50px 55px;
+  border-image: url(./static/catborder.png) 475 400 300 400 stretch stretch;
+  border-image-width: 200px;
+  margin-top: -25px;
+  margin-bottom: -40px;
+}
+
+.App-header {
+  background-color: #fff0cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  border-style: solid;
+  border-width: 0px 0px 10px 0px;
+  border-image: url(./static/button.svg) 10 10 10 10 repeat repeat;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  /* justify-content:baseline; */
+  justify-content: center;
+  align-items: center;   
+}
+.navbar_element {
+  padding: 0 20px;
+  width: 15%;
+}
+.navbar_element img{
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.content {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 2vw; 
+  margin: 0vw 6vw 0vw 6vw;
+  
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url(./static/button.svg) 10 10 10 10 repeat repeat;
+  
+}
+.search_wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.search_field {
+  width: 10vw;
+  border: 3px solid #8c8c8c;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+.search_field:focus{
+  color: #858d8a;
+}
+
+.search_btn {
+  width: 40px;
+  height: 36px;
+  border: 3px solid #8c8c8c;
+  background: #8f8f8f;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.search_btn img{
+  display: block;
+  height: 25px;  
+  width: 25px;
+}
+
+.result {
+  margin-left: 10vw;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.result_element {
+  border-style: solid;
+  border-width: 7px;
+  display: block;
+  border-image: url(./static/button.svg) 10 10 10 10 repeat repeat;
+  
+}
+.result_element_outer {
+  padding: 30px;
+}
+
+/* font */
+@font-face {
+  font-family: pastel_love;
+  src: url(./fonts/PrettyPastel-7K2P.ttf);
+}

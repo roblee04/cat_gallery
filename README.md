@@ -1,2 +1,1 @@
-# cat_gallery
-cat gallery
+# Cat Gallery
