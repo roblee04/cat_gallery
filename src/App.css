@@ -41,7 +41,7 @@
 }
 .navbar_element {
   padding: 0 20px;
-  width: 15%;
+  width: 10%;
 }
 .navbar_element img{
   max-width: 100%;
@@ -99,7 +99,7 @@
 
 .result {
   margin-left: 10vw;
-  margin-right: auto;
+  margin-right: 10vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

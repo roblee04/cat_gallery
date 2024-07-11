@@ -50,6 +50,9 @@ function App() {
 function RenderSearch() {
   const [query, setQuery] = useState("");
 
+  // api root
+  // const api_root = "https://e9d6-24-6-125-116.ngrok-free.app";
+  const api_root = "http://172.16.0.36:8002/"
   // hooks needed for api call
   const [responseData, setData] = useState({});
   const [loading, setLoading] = useState(false);
@@ -60,18 +63,22 @@ function RenderSearch() {
 
   function handleApi() {
     if (query == "") {
-      return
+      return;
     }
 
     setLoading(true);
-    let api_root = "http://localhost:8000/search/" ;
-    let api_link = api_root + query;
+    let api_link = api_root + "/search/" + query;
     
-    fetch(api_link)
+    let headers = new Headers();
+    headers.append('ngrok-skip-browser-warning', 'skip');
+    // headers.append('Content-Type', 'application/json')
+
+    fetch(api_link, {mode: 'cors', method: 'GET', headers: headers })
       .then(response => response.json())
       .then(data => {
         // Process the API response here
         console.log(data)
+        console.log(JSON.stringify(data))
         setData(JSON.parse(JSON.stringify(data)));
         setLoading(false);
       })
@@ -87,7 +94,7 @@ function RenderSearch() {
     <>
       <h1>Search</h1>
       {/* TEXTBOX: onChange, update query. onEnter, handleApi() */}
-      <div class="search_wrapper">
+      <div className="search_wrapper">
         <input className='search_field' onChange={handleQueryChange} 
           onKeyDown={(e) => {
             if (e.key === "Enter")
@@ -100,15 +107,13 @@ function RenderSearch() {
         <button className='search_btn' onClick={handleApi}><img src={paw_print_img}></img></button>
       </div>
       
-      
-
       <h1>Results</h1>
         <div>
         {loading ? (
           <p>Loading...</p>
         ) : (
           // <div>{responseData.result}</div>
-          <RenderSearchResults urls={responseData.result} size={100}></RenderSearchResults>
+          <RenderSearchResults urls={responseData.result} size={200} root={api_root}></RenderSearchResults>
         )}
         </div>
     </>
@@ -117,16 +122,17 @@ function RenderSearch() {
 
 // INPUT list of IMG urls
 // OUTPUT a group of <a> wrapped in div
-function RenderSearchResults({urls, size}) {
+function RenderSearchResults({urls, size, root}) {
 
   if (urls === undefined) {
-    return
+    return;
   }
-
+  console.log(root, "helo");
   const img_items = urls.map((url) => 
     <div className='result_element_outer'>
-      <a className='result_element' href={url}>
-        <img src={url} width={size} style={{verticalAlign: 'bottom'}} ></img>
+      <a className='result_element' href={root+url} target='_blank'>
+      {/* crossOrigin="anonymous"  */}
+        <img src={root+url} width={size} style={{verticalAlign: 'bottom'}} ></img>
       </a>
     </div>
     
