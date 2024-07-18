@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cat_gallery/static/css/main.87b5baae.css",
+    "main.js": "/cat_gallery/static/js/main.1c3614b7.js",
+    "static/js/453.ed3810f9.chunk.js": "/cat_gallery/static/js/453.ed3810f9.chunk.js",
+    "static/media/catborder.png": "/cat_gallery/static/media/catborder.98ec26a9bac474360b87.png",
+    "static/media/seamless_cat_bg.jpg": "/cat_gallery/static/media/seamless_cat_bg.92d0c5ff1b18a21805f7.jpg",
+    "static/media/discover.png": "/cat_gallery/static/media/discover.971b9b8dd5edc71ec66f.png",
+    "static/media/resources.png": "/cat_gallery/static/media/resources.1d8b3426c1784c14168c.png",
+    "static/media/about.png": "/cat_gallery/static/media/about.33e0c6b02b16144c3483.png",
+    "static/media/browse.png": "/cat_gallery/static/media/browse.9ff137fa42854fb3d456.png",
+    "static/media/PrettyPastel-7K2P.ttf": "/cat_gallery/static/media/PrettyPastel-7K2P.d262ec24fe3560f6ece3.ttf",
+    "static/media/paw_print.png": "/cat_gallery/static/media/paw_print.b9fbe318f2eb642d567a.png",
+    "static/media/button.svg": "/cat_gallery/static/media/button.682c5c29c98c5f2aea74.svg",
+    "index.html": "/cat_gallery/index.html",
+    "main.87b5baae.css.map": "/cat_gallery/static/css/main.87b5baae.css.map",
+    "main.1c3614b7.js.map": "/cat_gallery/static/js/main.1c3614b7.js.map",
+    "453.ed3810f9.chunk.js.map": "/cat_gallery/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87b5baae.css",
+    "static/js/main.1c3614b7.js"
+  ]
+}

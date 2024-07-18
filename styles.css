@@ -1,0 +1,47 @@
+
+body {
+    font-family: pastel_love;
+    font-size: 1.5vw;
+    background-image: url("./resources/seamless_cat_bg.jpg");
+    background-repeat: repeat;
+    background-size: 25%;
+}
+
+.header{
+    font-family: pastel_love;
+    font-size: xx-large;
+    background-color: blanchedalmond;
+    border: 2px solid #000000; 
+    line-height: 0px;
+    
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    /* justify-content:baseline; */
+    
+    align-items: center;
+    padding: 0 20px;   
+}
+.navbar_element {
+    width: 10%;
+}
+.navbar_element img{
+    max-width: 100%;
+    background-color: transparent;
+}
+
+.content {
+    border-radius: 25px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 20px; 
+}
+
+/* font */
+@font-face {
+    font-family: pastel_love;
+    src: url(resources/fonts/PrettyPastel-7K2P.ttf);
+}
+
